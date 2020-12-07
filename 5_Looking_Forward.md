@@ -90,7 +90,7 @@ server management domain. For more details, please refer to [TCG Server
 Management Domain Firmware
 Specification](https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf).
 
-####### Table 7 TPM PCR Usage in Management Domain 
+###### Table 7 TPM PCR Usage in Management Domain 
 
 (Source: [TCG Server](https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf))
 

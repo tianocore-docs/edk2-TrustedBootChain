@@ -41,7 +41,7 @@ coreboot
 [coreboot](https://github.com/coreboot) includes the measured boot flow.
 It is a simplified version. Table 3 shows the usage in coreboot.
 
-####### Table 3 Coreboot TPM PCR Usage 
+###### Table 3 Coreboot TPM PCR Usage 
 
 (Source: [coreboot measured boot](https://doc.coreboot.org/security/vboot/measured_boot.html))
 
@@ -118,7 +118,7 @@ Grub2
 [Grub2](https://github.com/rhboot/grub2) extends the trusted boot chain
 from platform firmware into the OS. Table 4 shows the PCR usage in Grub.
 
-####### Table 4 GRUB TPM PCR Usage 
+###### Table 4 GRUB TPM PCR Usage 
 
 (Source: [Grub2 Measured Boot](https://www.gnu.org/software/grub/manual/grub/html_node/Measured-Boot.html))
 
@@ -186,7 +186,7 @@ Linux Secure Boot Shim
 [Shim](https://github.com/rhboot/shim) is used to extend the UEFI secure
 boot concept to Linux. Table 5 shows the PCR usage in Shim.
 
-####### Table 5 Shim TPM PCR Usage
+###### Table 5 Shim TPM PCR Usage
 
 +---------------+-----------------------------------------------------+
 | **PCR Index** | **PCR Usage**                                       |
@@ -232,7 +232,7 @@ version of Windows used PCR\[8, 9, 10, 11\], while UEFI-based Windows
 uses PCR\[11, 12, 13, 14\] for the BitLocker policies. Table 6 shows the
 PCR usage in Windows BitLocker.
 
-####### Table 6 Windows BitLocker PCR Usage 
+###### Table 6 Windows BitLocker PCR Usage 
 
 (Source: [Windows BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings))
 
