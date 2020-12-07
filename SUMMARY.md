@@ -39,6 +39,6 @@
 * [TCG Trusted Boot Chain in EDK II](3_TCG_Trusted_Boot_Chain_in_EDKII.md)
 * [Other Trusted Boot Chains](4_Other_Trusted_Boot_Chains.md)
 * [Looking Forward](5_Looking_Forward.md)
-* [Checklist for Platform Developers](6_Checklist_for_Platform_Developers)
+* [Checklist for Platform Developers](6_Checklist_for_Platform_Developers.md)
 * [Glossary](7_Glossary.md)
 * [References](8_References.md)
