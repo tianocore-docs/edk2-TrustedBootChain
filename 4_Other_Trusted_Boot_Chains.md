@@ -45,19 +45,18 @@ It is a simplified version. Table 3 shows the usage in coreboot.
 
 (Source: [coreboot measured boot](https://doc.coreboot.org/security/vboot/measured_boot.html))
 
-  **PCR Index**   **PCR Usage**
-  --------------- --------------------------------------------
-  0               Google vboot GBB flags
-  1               Google vboot GBB HWID
-  2               Core Root of Trust for Measurement (CRTM)
-  3               Runtime data like hwinfo.hex or MRC cache.
-  4               N/A
-  5               N/A
-  6               N/A
-  7               N/A
+**PCR Index**   **PCR Usage**
+--------------- --------------------------------------------
+0               Google vboot GBB flags
+1               Google vboot GBB HWID
+2               Core Root of Trust for Measurement (CRTM)
+3               Runtime data like hwinfo.hex or MRC cache.
+4               N/A
+5               N/A
+6               N/A
+7               N/A
 
-[vboot](https://github.com/coreboot/vboot)
-[2api.h](https://github.com/coreboot/vboot/blob/master/firmware/2lib/include/2api.h)
+[vboot](https://github.com/coreboot/vboot)[2api.h](https://github.com/coreboot/vboot/blob/master/firmware/2lib/include/2api.h)
 defines two PCRs:
 
 -   **BOOT\_MODE\_PCR**(0) -- It is to record the digest based on the

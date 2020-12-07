@@ -72,16 +72,16 @@ described in the following table.
 
 (Source: [TCG PFP Specification](https://trustedcomputinggroup.org/resource/pc-client-specific-platform-firmware-profile-specification/))
 
-  **PCR Index**   **PCR Usage**
-  --------------- -----------------------------------------------------------------------------------------------------
-  0               SRTM, BIOS, Host Platform Extensions, Embedded Option ROMs and PI Drivers
-  1               Host Platform Configuration
-  2               UEFI driver and application Code
-  3               UEFI driver and application Configuration and Data
-  4               UEFI Boot Manager Code (usually the MBR) and Boot Attempts
-  5               Boot Manager Code Configuration and Data (for use by the Boot Manager Code) and GPT/Partition Table
-  6               Host Platform Manufacturer Specific
-  7               Secure Boot Policy, Secure boot Verification Authority
+**PCR Index**   **PCR Usage**
+--------------- -----------------------------------------------------------------------------------------------------
+0               SRTM, BIOS, Host Platform Extensions, Embedded Option ROMs and PI Drivers
+1               Host Platform Configuration
+2               UEFI driver and application Code
+3               UEFI driver and application Configuration and Data
+4               UEFI Boot Manager Code (usually the MBR) and Boot Attempts
+5               Boot Manager Code Configuration and Data (for use by the Boot Manager Code) and GPT/Partition Table
+6               Host Platform Manufacturer Specific
+7               Secure Boot Policy, Secure boot Verification Authority
 
 The following figure shows the high-level components and measurements.
 
@@ -104,12 +104,12 @@ two rules:
 
 ####### Table 2 PCR usage (simple rules)
 
-                       Code       Data Configuration
-  -------------------- ---------- --------------------
-  OEM                  PCR\[0\]   PCR\[1\]
-  Third party          PCR\[2\]   PCR\[3\]
-  OS Boot              PCR\[4\]   PCR\[5\]
-  Secure Boot Policy   N/A        PCR\[7\]
+Type                 Code       Data Configuration
+-------------------- ---------- --------------------
+OEM                  PCR\[0\]   PCR\[1\]
+Third party          PCR\[2\]   PCR\[3\]
+OS Boot              PCR\[4\]   PCR\[5\]
+Secure Boot Policy   N/A        PCR\[7\]
 
 For example:
 
