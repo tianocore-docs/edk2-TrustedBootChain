@@ -129,19 +129,19 @@ from platform firmware into the OS. Table 4 shows the PCR usage in Grub.
 |               |                                                     |
 |               | All executed commands (including those from         |
 |               | configuration files) will be logged and measured as |
-|               | entered with a prefix of "grub\_cmd: "              |
+|               | entered with a prefix of grub\_cmd\:                |
 +---------------+-----------------------------------------------------+
-|               | Kernel command line:                                |
+| 8             | Kernel command line:                                |
 |               |                                                     |
 |               | Any command line passed to a kernel will be logged  |
 |               | and measured as entered with a prefix of            |
-|               | "kernel\_cmdline: "                                 |
+|               | kernel\_cmdline\:                                   |
 +---------------+-----------------------------------------------------+
-|               | Module command line:                                |
+| 8             | Module command line:                                |
 |               |                                                     |
 |               | Any command line passed to a kernel module will be  |
 |               | logged and measured as entered with a prefix of     |
-|               | "module\_cmdline: "                                 |
+|               | module\_cmdline\:                                   |
 +---------------+-----------------------------------------------------+
 | 9             | Files:                                              |
 |               |                                                     |
