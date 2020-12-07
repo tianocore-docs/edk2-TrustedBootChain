@@ -72,16 +72,16 @@ described in the following table.
 
 (Source: [TCG PFP Specification](https://trustedcomputinggroup.org/resource/pc-client-specific-platform-firmware-profile-specification/))
 
-**PCR Index**   **PCR Usage**
---------------- -----------------------------------------------------------------------------------------------------
-0               SRTM, BIOS, Host Platform Extensions, Embedded Option ROMs and PI Drivers
-1               Host Platform Configuration
-2               UEFI driver and application Code
-3               UEFI driver and application Configuration and Data
-4               UEFI Boot Manager Code (usually the MBR) and Boot Attempts
-5               Boot Manager Code Configuration and Data (for use by the Boot Manager Code) and GPT/Partition Table
-6               Host Platform Manufacturer Specific
-7               Secure Boot Policy, Secure boot Verification Authority
+| **PCR Index** | **PCR Usage** |
+| --------------| ---------------------------------------------------------------------------|
+| 0             | SRTM, BIOS, Host Platform Extensions, Embedded Option ROMs and PI Drivers |
+| 1             | Host Platform Configuration |
+| 2             | UEFI driver and application Code |
+| 3             | UEFI driver and application Configuration and Data |
+| 4             | UEFI Boot Manager Code (usually the MBR) and Boot Attempts |
+| 5             | Boot Manager Code Configuration and Data (for use by the Boot Manager Code) and GPT/Partition Table |
+| 6             | Host Platform Manufacturer Specific |
+| 7             | Secure Boot Policy, Secure boot Verification Authority |
 
 The following figure shows the high-level components and measurements.
 
