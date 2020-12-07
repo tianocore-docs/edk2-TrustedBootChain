@@ -48,10 +48,9 @@ on the platform. One example is the OCP Project
 The platform RoT may also collect measurements from the devices and
 support remote attestation. Figure 14 shows the concept of platform RoT.
 
-![](media/image14.png){width="6.492361111111111in"
-height="4.0in"}
+![](media/image14.png)
 
-Figure 14. Platform Root of Trust
+###### Figure 14 Platform Root of Trust
 
 Device Root of Trust - DICE
 ---------------------------
@@ -69,31 +68,31 @@ DICE symmetric attestation architecture, which may be used in a resource
 constrain environment. For more detail, please refer to [TCG DICE
 architecture](https://trustedcomputinggroup.org/work-groups/dice-architectures/).
 
-![](media/image15.png){width="6.426221566054243in"
-height="4.378205380577428in"}
+![](media/image15.png)
 
-Figure 15. DICE implicit identity based attestation (source: [DICE
-Identity](https://trustedcomputinggroup.org/resource/implicit-identity-based-device-attestation/))
+###### Figure 15 DICE implicit identity based attestation 
 
-![](media/image16.png){width="6.0641021434820646in"
-height="3.872992125984252in"}
+(source: [DICE Identity](https://trustedcomputinggroup.org/resource/implicit-identity-based-device-attestation/))
 
-Figure 16. DICE symmetric identity based attestation (source: [DICE
-symmetric
-Identity](https://trustedcomputinggroup.org/resource/symmetric-identity-based-device-attestation/))
+![](media/image16.png)
+
+###### Figure 16 DICE symmetric identity based attestation 
+
+(source: [DICE symmetric Identity](https://trustedcomputinggroup.org/resource/symmetric-identity-based-device-attestation/))
 
 Server Management Domain Firmware
 ---------------------------------
 
 A server management domain (such as Baseboard Management Controller,
 also known as BMC) may have its own TPM module and SRTM because of its
-isolated execution environment. Table 8 shows the TPM PCR usage in a
+isolated execution environment. Table 7 shows the TPM PCR usage in a
 server management domain. For more details, please refer to [TCG Server
 Management Domain Firmware
 Specification](https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf).
 
-Table 8: TPM PCR Usage in Management Domain (Source: [TCG
-Server](https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf))
+####### Table 7 TPM PCR Usage in Management Domain 
+
+(Source: [TCG Server](https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf))
 
   **PCR Index**   **PCR Usage**
   --------------- ----------------------------------------
@@ -137,28 +136,28 @@ communication. See Figure 4-3B. For more detail, please refer to [DMTF
 SPDM
 Specification](https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf).
 
-![](media/image17.png){width="6.5in"
-height="3.9166666666666665in"}
+![](media/image17.png)
 
-Figure 17. SPDM 1.0 (source:
-[SPDM](https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf))
+###### Figure 17 SPDM 1.0 
 
-![](media/image18.png){width="6.5in"
-height="2.6666666666666665in"}
+(source:[SPDM](https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf))
 
-Figure 18. SPDM 1.1 (source:
-[SPDM](https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf))
+![](media/image18.png)
+
+###### Figure 18 SPDM 1.1 
+
+(source: [SPDM](https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf))
 
 Currently [openspdm](https://github.com/jyao1/openspdm) project provides
 an open source tool to validate the SPDM implementation and some sample
 code for explaining the SPDM concept. Figure 4-4 shows the openspdm
 internal design.
 
-![](media/image19.png){width="6.5in"
-height="2.954861111111111in"}
+![](media/image19.png)
 
-Figure 19. openspdm design (Source: [openspdm
-doc](https://github.com/jyao1/openspdm/blob/master/Doc/Design.md))
+###### Figure 19 Openspdm Design 
+
+(Source: [openspdmdoc](https://github.com/jyao1/openspdm/blob/master/Doc/Design.md))
 
 An Open Trusted Platform -- Putting it all together
 ---------------------------------------------------
@@ -166,7 +165,6 @@ An Open Trusted Platform -- Putting it all together
 To put all of the above technology together, Figure 4-5 shows an example
 of an open trusted platform.
 
-![](media/image20.png){width="6.5in"
-height="4.166666666666667in"}
+![](media/image20.png)
 
-Figure 20. An Open Trusted Platform
+###### Figure 20 An Open Trusted Platform

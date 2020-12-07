@@ -68,8 +68,9 @@ represent the platform's dynamic root of trust for measurement (DRTM).
 In this document we will focus on the usage of PCRs \[0-7\], as
 described in the following table.
 
-Table 1: TPM PCR Usage (Source: [TCG PFP
-Specification](https://trustedcomputinggroup.org/resource/pc-client-specific-platform-firmware-profile-specification/))
+####### Table 1 TPM PCR Usage 
+
+(Source: [TCG PFP Specification](https://trustedcomputinggroup.org/resource/pc-client-specific-platform-firmware-profile-specification/))
 
   **PCR Index**   **PCR Usage**
   --------------- -----------------------------------------------------------------------------------------------------
@@ -84,11 +85,11 @@ Specification](https://trustedcomputinggroup.org/resource/pc-client-specific-pla
 
 The following figure shows the high-level components and measurements.
 
-![](media/image2.png){width="6.492361111111111in"
-height="4.098611111111111in"}
+![](media/image2.png)
 
-*Figure 2 -- High-level components and measurements\
-(See Building Secure Firmware by Jiewen Yao & Vincent Zimmer)*
+###### Figure 2 High level components and measurements
+
+(See Building Secure Firmware by Jiewen Yao & Vincent Zimmer)
 
 There is an easy way to remember Table 1, as described by the following
 two rules:
@@ -101,7 +102,7 @@ two rules:
     policy, PCR\[6\] is undefined by the PFP spec and is
     platform-specific.
 
-Table 2. PCR usage (simple rules)
+####### Table 2 PCR usage (simple rules)
 
                        Code       Data Configuration
   -------------------- ---------- --------------------
@@ -241,10 +242,9 @@ type definition can be found at
 [UefiTcgPlatform.h](https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h).
 Figure 3 below shows the high level flow of the modules.
 
-![](media/image3.png){width="6.5in"
-height="3.4166666666666665in"}
+![](media/image3.png)
 
-Figure 3: TCG Trusted Boot Flow
+###### Figure 3 TCG Trusted Boot Flow
 
 ### PCR 0
 
@@ -799,10 +799,9 @@ the secure boot policy and authority shall also be reported in PCR\[7\].
 Figure 4 shows a complete trusted boot chain that commences from a
 hardware root of trust module.
 
-![](media/image4.png){width="6.196969597550306in"
-height="2.22455271216098in"}
+![](media/image4.png)
 
-Figure 4: TCG Trusted Boot Flow
+###### Figure 4 TCG Trusted Boot Flow
 
 For test purposes, we have a UEFI shell tool
 [Tcg2DumpLog](https://github.com/jyao1/EdkiiShellTool/tree/master/EdkiiShellToolPkg/Tcg2DumpLog)
@@ -872,19 +871,17 @@ Figure 6 shows the event log verification.
 5)  The server replays the event log to reproduce the PCR values. If
     they are same, then the server knows the TCG event log is genuine.
 
-![](media/image5.jpeg){width="6.391025809273841in"
-height="4.260684601924759in"}
+![](media/image5.jpeg)
 
-Figure 5: Remote Attestation -- TPM Device Verification (Source:
-[OpenPower
-TrustBoot](https://developer.ibm.com/articles/trusted-boot-openpower/))
+###### Figure 5 Remote Attestation TPM Device Verification 
 
-![](media/image6.jpeg){width="6.514963910761155in"
-height="3.8846161417322835in"}
+(Source: [OpenPower TrustBoot](https://developer.ibm.com/articles/trusted-boot-openpower/))
 
-Figure 6: Remote Attestation -- Event Log Verification (Source:
-[OpenPower
-TrustBoot](https://developer.ibm.com/articles/trusted-boot-openpower/))
+![](media/image6.jpeg)
+
+###### Figure 6 Remote Attestation Event Log Verification 
+
+(Source: [OpenPower TrustBoot](https://developer.ibm.com/articles/trusted-boot-openpower/))
 
 Once the verifier in the server gets the event log, the verifier can
 compare it with the reference integrity measurement (RIM) based upon a
@@ -892,11 +889,11 @@ predefine policy.
 
 Figure 7 shows the final RIM validation process.
 
-![](media/image7.png){width="6.5in"
-height="3.1104166666666666in"}
+![](media/image7.png)
 
-Figure 7. RIM Validation (source: [TCG
-FIM](https://trustedcomputinggroup.org/wp-content/uploads/TCG_PC_Client_FIM_v1_r40_02dec2020.pdf))
+###### Figure 7 RIM Validation 
+
+(source: [TCG FIM](https://trustedcomputinggroup.org/wp-content/uploads/TCG_PC_Client_FIM_v1_r40_02dec2020.pdf))
 
 For test purposes, we created a sample
 [FspManifestTool](https://github.com/jyao1/FSP/tree/FspAttestation/Tools/ManifestTools).
@@ -1072,10 +1069,9 @@ and calls
 
 Figure 8 shows the TCG trusted boot component in EDK II.
 
-![](media/image8.png){width="6.492361111111111in"
-height="4.666666666666667in"}
+![](media/image8.png)
 
-Figure 8: TCG Trusted Boot Component in EDK II
+###### Figure 8 TCG Trusted Boot Component in EDK II
 
 ### Error Handling
 
@@ -1325,10 +1321,9 @@ and is recorded in
 
 Figure 9 shows the TPM bank selection in EDK II.
 
-![](media/image9.png){width="6.492361111111111in"
-height="3.7805555555555554in"}
+![](media/image9.png)
 
-Figure 9: TPM Bank Selection in EDK II
+###### Figure 9 TPM Bank Selection in EDK II
 
 In brief, we have below result:
 
@@ -1440,10 +1435,9 @@ to serve that purpose.
 
 Figure 10 shows TCG PP component in EDK II.
 
-![](media/image10.png){width="6.5in"
-height="4.530555555555556in"}
+![](media/image10.png)
 
-Figure 10: TCG PP Component in EDK II
+###### Figure 10 TCG PP Component in EDK II
 
 TCG Memory Overwrite (MOR)
 --------------------------
@@ -1523,10 +1517,9 @@ to handle both secure MOR version 1 (lock without key) and version 2
 
 Figure 11 shows the high level TCG MOR Flow.
 
-![](media/image11.png){width="6.492361111111111in"
-height="2.3027777777777776in"}
+![](media/image11.png)
 
-Figure 11 TCG MOR Flow
+###### Figure 11 TCG MOR Flow
 
 The MOR variable not only control memory overwrite but also control the
 storage device TPer reset. We will discuss that in TCG storage section.
@@ -1537,10 +1530,9 @@ deprecated because it does not support secure MOR.
 
 Figure 12 shows TCG MOR component in EDK II.
 
-![](media/image12.png){width="6.5in"
-height="4.030555555555556in"}
+![](media/image12.png)
 
-Figure 12 TCG MOR Component in EDK II
+###### Figure 12 TCG MOR Component in EDK II
 
 OS Interface
 ------------
@@ -1840,8 +1832,9 @@ driver pops up a message to notify the user of this potential delay.
 
 Figure 13 shows TCG storage component in EDK II.
 
-![](media/image13.png){width="6.5in"
-height="4.166666666666667in"} Figure 13 TCG Storage Component in EDK II
+![](media/image13.png)
+
+###### Figure 13 TCG Storage Component in EDK II
 
 ### BlockSid
 

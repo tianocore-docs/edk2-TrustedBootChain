@@ -31,7 +31,7 @@
 
 <img src="media/TianocoreTitlePageLogo.jpg" width="300" />
 
-### {{ book.title }}
+# {{ book.title }}
 
 {% if book.draft %}
 ** DRAFT FOR REVIEW **
@@ -45,16 +45,11 @@
 ** {{ book.udkrelease }} **
 {% endif %}
 
-by
 
-Jiewen Yao </br>
-Intel Corporation
-
-Vincent J. Zimmer </br>
-Intel Corporation
+by Jiewen Yao and Vincent J. Zimmer, Intel Corporation
 
 
-### Acknowledgements
+## Acknowledgements
 
 Redistribution and use in source (original document form) and 'compiled'
 forms (converted to PDF, epub, HTML and other formats) with or without
@@ -82,7 +77,7 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Copyright (c) 2020, Intel Corporation. All rights reserved.
 
-### Revision History
+## Revision History
 
 | Revision   | Revision History   | Date           |
 | ---------- | ------------------ | -------------- |

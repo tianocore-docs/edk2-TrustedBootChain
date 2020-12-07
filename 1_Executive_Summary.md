@@ -38,5 +38,5 @@ This document explains how to implement the Trusted Computing Group
 **Prerequisite**
 
 This document assumes that the audience has basic firmware development
-experience using UEFI & EDK II, along with basic knowledge of the UEFI
-boot flow, Trusted Platform Module (TPM) and cryptography.
+experience using UEFI and EDK II, plus basic knowledge of the UEFI
+boot flow, Trusted Platform Module (TPM), and cryptography.
