@@ -1,9 +1,8 @@
 ## Tables
 
-* [Table 1 TPM PCR Usage](3_TCG_Trusted_Boot_Chain_in_EDKII.md#tpm-pcr-usage)
+* [Table 1 TPM PCR Usage](3_TCG_Trusted_Boot_Chain_in_EDKII.md#table-1-tpm-pcr-usage)
+* [Table 2 PCR Usage (simple rules)](3_TCG_Trusted_Boot_Chain_in_EDKII.md#table-2-pcr-usage-simple-rules)
 
-Table 1
-Table 2
 Table 3
 Table 4
 Table 5

@@ -104,12 +104,12 @@ two rules:
 
 ###### Table 2 PCR usage (simple rules)
 
-Type                 Code       Data Configuration
--------------------- ---------- --------------------
-OEM                  PCR\[0\]   PCR\[1\]
-Third party          PCR\[2\]   PCR\[3\]
-OS Boot              PCR\[4\]   PCR\[5\]
-Secure Boot Policy   N/A        PCR\[7\]
+| Type                 | Code       | Data Configuration | 
+| -------------------- | ---------- | --------------------| 
+| OEM                  | PCR\[0\]   | PCR\[1\] | 
+| Third party          | PCR\[2\]   | PCR\[3\] | 
+| OS Boot              | PCR\[4\]   | PCR\[5\] | 
+| Secure Boot Policy   | N/A        | PCR\[7\] | 
 
 For example:
 
