@@ -85,9 +85,9 @@ described in the following table.
 
 The following figure shows the high-level components and measurements.
 
-![](media/image2.png)
-
 ###### Figure 2 High level components and measurements
+
+![](media/image2.png)
 
 (See Building Secure Firmware by Jiewen Yao & Vincent Zimmer)
 
@@ -242,9 +242,9 @@ type definition can be found at
 [UefiTcgPlatform.h](https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h).
 Figure 3 below shows the high level flow of the modules.
 
-![](media/image3.png)
-
 ###### Figure 3 High Level Module Flow
+
+![](media/image3.png)
 
 ### PCR 0
 
@@ -799,9 +799,9 @@ the secure boot policy and authority shall also be reported in PCR\[7\].
 Figure 4 shows a complete trusted boot chain that commences from a
 hardware root of trust module.
 
-![](media/image4.png)
-
 ###### Figure 4 TCG Trusted Boot Flow
+
+![](media/image4.png)
 
 For test purposes, we have a UEFI shell tool
 [Tcg2DumpLog](https://github.com/jyao1/EdkiiShellTool/tree/master/EdkiiShellToolPkg/Tcg2DumpLog)
@@ -871,15 +871,15 @@ Figure 6 shows the event log verification.
 5)  The server replays the event log to reproduce the PCR values. If
     they are same, then the server knows the TCG event log is genuine.
 
-![](media/image5.jpeg)
-
 ###### Figure 5 Remote Attestation TPM Device Verification 
+
+![](media/image5.jpeg)
 
 (Source: [OpenPower TrustBoot](https://developer.ibm.com/articles/trusted-boot-openpower/))
 
-![](media/image6.jpeg)
-
 ###### Figure 6 Remote Attestation Event Log Verification 
+
+![](media/image6.jpeg)
 
 (Source: [OpenPower TrustBoot](https://developer.ibm.com/articles/trusted-boot-openpower/))
 
@@ -889,9 +889,9 @@ predefine policy.
 
 Figure 7 shows the final RIM validation process.
 
-![](media/image7.png)
-
 ###### Figure 7 RIM Validation 
+
+![](media/image7.png)
 
 (source: [TCG FIM](https://trustedcomputinggroup.org/wp-content/uploads/TCG_PC_Client_FIM_v1_r40_02dec2020.pdf))
 
@@ -1069,9 +1069,9 @@ and calls
 
 Figure 8 shows the TCG trusted boot component in EDK II.
 
-![](media/image8.png)
-
 ###### Figure 8 TCG Trusted Boot Component in EDK II
+
+![](media/image8.png)
 
 ### Error Handling
 
@@ -1321,9 +1321,9 @@ and is recorded in
 
 Figure 9 shows the TPM bank selection in EDK II.
 
-![](media/image9.png)
-
 ###### Figure 9 TPM Bank Selection in EDK II
+
+![](media/image9.png)
 
 In brief, we have below result:
 
@@ -1435,9 +1435,9 @@ to serve that purpose.
 
 Figure 10 shows TCG PP component in EDK II.
 
-![](media/image10.png)
-
 ###### Figure 10 TCG PP Component in EDK II
+
+![](media/image10.png)
 
 TCG Memory Overwrite (MOR)
 --------------------------
@@ -1517,22 +1517,20 @@ to handle both secure MOR version 1 (lock without key) and version 2
 
 Figure 11 shows the high level TCG MOR Flow.
 
-![](media/image11.png)
-
 ###### Figure 11 TCG MOR Flow
+
+![](media/image11.png)
 
 The MOR variable not only control memory overwrite but also control the
 storage device TPer reset. We will discuss that in TCG storage section.
 
 Previous MOR specifications also defined an ACPI interface. The OS may
 set MOR state by using an ACPI \_DSM method. This interface is
-deprecated because it does not support secure MOR.
-
-Figure 12 shows TCG MOR component in EDK II.
-
-![](media/image12.png)
+deprecated because it does not support secure MOR. Figure 12 shows TCG MOR component in EDK II.
 
 ###### Figure 12 TCG MOR Component in EDK II
+
+![](media/image12.png)
 
 OS Interface
 ------------
@@ -1832,9 +1830,9 @@ driver pops up a message to notify the user of this potential delay.
 
 Figure 13 shows TCG storage component in EDK II.
 
-![](media/image13.png)
-
 ###### Figure 13 TCG Storage Component in EDK II
+
+![](media/image13.png)
 
 ### BlockSid
 

@@ -48,9 +48,9 @@ on the platform. One example is the OCP Project
 The platform RoT may also collect measurements from the devices and
 support remote attestation. Figure 14 shows the concept of platform RoT.
 
-![](media/image14.png)
-
 ###### Figure 14 Platform Root of Trust
+
+![](media/image14.png)
 
 Device Root of Trust - DICE
 ---------------------------
@@ -68,15 +68,15 @@ DICE symmetric attestation architecture, which may be used in a resource
 constrain environment. For more detail, please refer to [TCG DICE
 architecture](https://trustedcomputinggroup.org/work-groups/dice-architectures/).
 
-![](media/image15.png)
-
 ###### Figure 15 DICE implicit identity based attestation 
+
+![](media/image15.png)
 
 (source: [DICE Identity](https://trustedcomputinggroup.org/resource/implicit-identity-based-device-attestation/))
 
-![](media/image16.png)
-
 ###### Figure 16 DICE symmetric identity based attestation 
+
+![](media/image16.png)
 
 (source: [DICE symmetric Identity](https://trustedcomputinggroup.org/resource/symmetric-identity-based-device-attestation/))
 
@@ -124,7 +124,7 @@ between two device entities.
 
 SPDM 1.0 defines messages for hardware and firmware identification and
 authentication, including messages for hardware and firmware measurement
-collection and attestation. See Figure 4-3A. SPDM 1.1 defines a secure
+collection and attestation. See Figure 17. SPDM 1.1 defines a secure
 session establishment mechanism between two entities by using Diffie
 Hellman ephemeral (DHE) or Elliptic Curve DHE (ECDHE) key exchange with
 asymmetric authentication such as RSA or Elliptic Curve Digital
@@ -132,19 +132,20 @@ Signature Algorithm (ECDSA). For a device that only supports symmetric
 cryptography, the secure session can also be established with a
 pre-shared key (PSK). Once the session is created, two entities can use
 Authentication Encryption and Associated Data (AEAD) for message
-communication. See Figure 4-3B. For more detail, please refer to [DMTF
+communication. See Figure 18. For more detail, please refer to [DMTF
 SPDM
 Specification](https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf).
 
-![](media/image17.png)
 
 ###### Figure 17 SPDM 1.0 
 
+![](media/image17.png)
+
 (source:[SPDM](https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf))
 
-![](media/image18.png)
-
 ###### Figure 18 SPDM 1.1 
+
+![](media/image18.png)
 
 (source: [SPDM](https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf))
 
@@ -153,9 +154,10 @@ an open source tool to validate the SPDM implementation and some sample
 code for explaining the SPDM concept. Figure 4-4 shows the openspdm
 internal design.
 
-![](media/image19.png)
 
 ###### Figure 19 Openspdm Design 
+
+![](media/image19.png)
 
 (Source: [openspdmdoc](https://github.com/jyao1/openspdm/blob/master/Doc/Design.md))
 
@@ -165,6 +167,7 @@ An Open Trusted Platform -- Putting it all together
 To put all of the above technology together, Figure 4-5 shows an example
 of an open trusted platform.
 
-![](media/image20.png)
 
 ###### Figure 20 An Open Trusted Platform
+
+![](media/image20.png)

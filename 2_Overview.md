@@ -104,9 +104,9 @@ attester and presents the event log and PCR's as evidence to a verifier.
 Then the verifier can compare the evidence (event log and PCRs) and
 compare it with the assertion (RIM manifest).
 
-![](media/image1.png)
-
 ###### Figure 1 Measurement and Attestation
+
+![](media/image1.png)
 
 > A verifier can use various policies to determine the state of the
 > platform. Some example policies include the following:
