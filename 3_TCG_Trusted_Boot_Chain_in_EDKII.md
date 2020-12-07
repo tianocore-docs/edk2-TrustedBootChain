@@ -244,7 +244,7 @@ Figure 3 below shows the high level flow of the modules.
 
 ![](media/image3.png)
 
-###### Figure 3 TCG Trusted Boot Flow
+###### Figure 3 High Level Module Flow
 
 ### PCR 0
 

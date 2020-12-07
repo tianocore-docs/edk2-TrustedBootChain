@@ -1,23 +1,22 @@
 ## Figures
 
 * [Figure 1 Measurement and Attestation](2_Overview.md#figure-1-measurement-and-attestation)
-
-* Figure 2
-* Figure 3
-* Figure 4
-* Figure 5
-* Figure 6
-* Figure 7
-* Figure 8
-* Figure 9
-* Figure 10
-* Figure 11
-* Figure 12
-* Figure 13
-* Figure 14
-* Figure 15
-* Figure 16
-* Figure 17
-* Figure 18
-* Figure 19
-* Figure 20
+* [Figure 2 High Level Components and Measuring](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-2-high-level-components-and-measurements)
+* [Figure 3 High Level Module Flow](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-3-high-level-module-flow)
+* [Figure 4 TCG Trusted Boot Flow](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-4-tcg-trusted-boot-flow)
+* [Figure 5 Remote Attestation TPM Device Verification](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-5-remote-attestation-tpm-device-verification)
+* [Figure 6 Remote Attestation Event Log Verification](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-6-remote-attestation-event-log-verification)
+* [Figure 7 RIM Validation](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-7-rim-validation)
+* [Figure 8 TCG Trusted Boot Component in EDK II](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-8-tcg-trusted-boot-component-in-edk-ii)
+* [Figure 9 TPM Bank Selection in EDK II](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-9-tpm-bank-selection-in-edk-ii)
+* [Figure 10 TCG PP Component in EDK II](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-10-tcg-pp-component-in-edk-ii)
+* [Figure 11 TCG MOR Flow](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-11-tcg-mor-flow)
+* [Figure 12 TBD MOR Component in EDK II](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-12-tcg-mor-component-in-edk-ii)
+* [Figure 13 TCG Storage Component in EDK II](3_TCG_Trusted_Boot_Chain_in_EDKII.md#figure-13-tcg-storage-component-in-edk-ii)
+* [Figure 14 Platform Root of Trust](5_Looking_Forward.md#figure-14-platform-root-of-trust)
+* [Figure 15 Dice Implicit Identiy Based Attestation](5_Looking_Forward.md#figure-15-dice-implicit-identity-based-attestation)
+* [Figure 16 Dice Symmetric Identity Based Attestation](5_Looking_Forward.md#figure-16-dice-symmetric-identity-based-attestation)
+* [Figure 17 SPDM 1.0](5_Looking_Forward.md#figure-17-spdm-10)
+* [Figure 18 SPDM 1.1](5_Looking_Forward.md#figure-18-spdm-11)
+* [Figure 19 Open SPDM Design](5_Looking_Forward.md#figure-19-openspdm-design)
+* [Figure 20 An Open Trusted Platform](5_Looking_Forward.md#figure-20-an-open-trusted-platform)
