@@ -68,7 +68,7 @@ represent the platform's dynamic root of trust for measurement (DRTM).
 In this document we will focus on the usage of PCRs \[0-7\], as
 described in the following table.
 
-####### Table 1 TPM PCR Usage 
+###### Table 1 TPM PCR Usage 
 
 (Source: [TCG PFP Specification](https://trustedcomputinggroup.org/resource/pc-client-specific-platform-firmware-profile-specification/))
 
@@ -102,7 +102,7 @@ two rules:
     policy, PCR\[6\] is undefined by the PFP spec and is
     platform-specific.
 
-####### Table 2 PCR usage (simple rules)
+###### Table 2 PCR usage (simple rules)
 
 Type                 Code       Data Configuration
 -------------------- ---------- --------------------

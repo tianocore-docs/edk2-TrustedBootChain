@@ -1,6 +1,6 @@
 ## Figures
 
-* [Figure 1 Measurement and Attestation](1_Overview#figure-1-measurement-and-attestation)
+* [Figure 1 Measurement and Attestation](1_Overview.md#figure-1-measurement-and-attestation)
 
 * Figure 2
 * Figure 3
