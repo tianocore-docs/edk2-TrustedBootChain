@@ -45,6 +45,14 @@
 ** {{ book.udkrelease }} **
 {% endif %}
 
+by
+
+Jiewen Yao </br>
+Intel Corporation
+
+Vincent J. Zimmer </br>
+Intel Corporation
+
 
 ### Acknowledgements
 
@@ -72,11 +80,11 @@ WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
 OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
 ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-Copyright (c) 2017, Intel Corporation. All rights reserved.
+Copyright (c) 2020, Intel Corporation. All rights reserved.
 
 ### Revision History
 
 | Revision   | Revision History   | Date           |
 | ---------- | ------------------ | -------------- |
-| 1.0        | Initial release.   | November 2020  |
+| 1.0        | Initial release.   | December 2020  |
 

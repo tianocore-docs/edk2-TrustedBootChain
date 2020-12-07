@@ -32,14 +32,13 @@
 # Summary
 
 * [Understanding the Trusted Boot Chain Implementation](README.md)
-* [1 First Chapter](chapter1.md#1-first-chapter)
-
----
-
-* Tables
-
-
----
-  
-* Figures
-
+* [List of Tables](TABLES.md)
+* [List of Figures](FIGURES.md)
+* [Executive Summary](1_Executive_Summary.md)
+* [Overview](2_Overview.md)
+* [TCG Trusted Boot Chain in EDK II](3_TCG_Trusted_Boot_Chain_in_EDKII.md)
+* [Other Trusted Boot Chains](4_Other_Trusted_Boot_Chains.md)
+* [Looking Forward](5_Looking_Forward.md)
+* [Checklist for Platform Developers](6_Checklist_for_Platform_Developers)
+* [Glossary](7_Glossary.md)
+* [References](8_References.md)
