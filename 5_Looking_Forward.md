@@ -92,23 +92,23 @@ Specification](https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerMa
 
 ###### Table 7 TPM PCR Usage in Management Domain 
 
-(Source: [TCG Server](https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf))
+| **PCR Index**   | **PCR Usage** | 
+| --------------- | ----------------------------------------| 
+| 0               | SRTM and Boot Loader | 
+| 1               | Management Domain Configuration | 
+| 2               | Loadable Devices | 
+| 3               | Loadable Devices Configuration | 
+| 4               | Reserved for future | 
+| 5               | Reserved for future | 
+| 6               | Vendor Specific | 
+| 7               | Reserved for future | 
+| 8               | For management domain OS | 
+| 9               | For management domain OS configuration | 
+| 10-15           | Reserved for future | 
+| 16              | Debug | 
+| 17-23           | Reserved for future | 
 
-  **PCR Index**   **PCR Usage**
-  --------------- ----------------------------------------
-  0               SRTM and Boot Loader
-  1               Management Domain Configuration
-  2               Loadable Devices
-  3               Loadable Devices Configuration
-  4               Reserved for future
-  5               Reserved for future
-  6               Vendor Specific
-  7               Reserved for future
-  8               For management domain OS
-  9               For management domain OS configuration
-  10\~15          Reserved for future
-  16              Debug
-  17\~23          Reserved for future
+(Source: [TCG Server(https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf))
 
 Secure communication -- SPDM
 ----------------------------

@@ -43,8 +43,6 @@ It is a simplified version. Table 3 shows the usage in coreboot.
 
 ###### Table 3 Coreboot TPM PCR Usage 
 
-(Source: [coreboot measured boot](https://doc.coreboot.org/security/vboot/measured_boot.html))
-
 | **PCR Index**   | **PCR Usage** | 
 | --------------- | --------------------------------------------| 
 | 0               | Google vboot GBB flags | 
@@ -55,6 +53,8 @@ It is a simplified version. Table 3 shows the usage in coreboot.
 | 5               | N/A | 
 | 6               | N/A | 
 | 7               | N/A | 
+
+(Source: [coreboot measured boot](https://doc.coreboot.org/security/vboot/measured_boot.html))
 
 [vboot](https://github.com/coreboot/vboot)[2api.h](https://github.com/coreboot/vboot/blob/master/firmware/2lib/include/2api.h)
 defines two PCRs:
@@ -120,8 +120,6 @@ from platform firmware into the OS. Table 4 shows the PCR usage in Grub.
 
 ###### Table 4 GRUB TPM PCR Usage 
 
-(Source: [Grub2 Measured Boot](https://www.gnu.org/software/grub/manual/grub/html_node/Measured-Boot.html))
-
 
 | **PCR Index** | **PCR Usage**                                       |
 |---------------|-----------------------------------------------------|
@@ -129,6 +127,8 @@ from platform firmware into the OS. Table 4 shows the PCR usage in Grub.
 |               | Kernel command line: Any command line passed to a kernel will be logged and measured as entered with a prefix of "kernel cmdline: " |
 |               | Module command line: Any command line passed to a kernel module will be logged and measured as entered with a prefix of "module cmdline: " |
 | 9             | Files: Any file read by GRUB will be logged and measured with a descriptive text corresponding to the filename.   |
+
+(Source: [Grub2 Measured Boot](https://www.gnu.org/software/grub/manual/grub/html_node/Measured-Boot.html))
 
 Grub2
 [tpm.h](https://github.com/rhboot/grub2/blob/master/include/grub/tpm.h)
@@ -168,20 +168,11 @@ boot concept to Linux. Table 5 shows the PCR usage in Shim.
 
 ###### Table 5 Shim TPM PCR Usage
 
-+---------------+-----------------------------------------------------+
 | **PCR Index** | **PCR Usage**                                       |
-+===============+=====================================================+
-| 4             | UEFI application, such as second\_stage, FALLBACK,  |
-|               | MOK\_MANAGER.                                       |
-+---------------+-----------------------------------------------------+
-| 7             | UEFI variable, such as "MokSBState".                |
-|               |                                                     |
-|               | Verification policy authority, such as "Shim",      |
-|               | "db", "MokList".                                    |
-+---------------+-----------------------------------------------------+
-| 14            | UEFI variable, such as "MokList", "MokListX",       |
-|               | "MokSBState".                                       |
-+---------------+-----------------------------------------------------+
+|---------------|-----------------------------------------------------|
+| 4             | UEFI application, such as second\_stage, FALLBACK, MOK\_MANAGER. |
+| 7             | UEFI variable, such as "MokSBState". Verification policy authority, such as "Shim", "db", "MokList". |
+| 14            | UEFI variable, such as "MokList", "MokListX", "MokSBState". |
 
 [shim.c](https://github.com/rhboot/shim/blob/main/shim.c)
 **start\_image**() supports to execute a UEFI application image, such as
@@ -214,15 +205,14 @@ PCR usage in Windows BitLocker.
 
 ###### Table 6 Windows BitLocker PCR Usage 
 
-(Source: [Windows BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings))
+| **PCR Index**   | **PCR Usage (Legacy)**     | **PCR Usage (UEFI)** | 
+|-----------------|----------------------------|----------------------|
+| 8               | NTFS Boot Sector           | Reserved | 
+| 9               | NTFS Boot Block            | Reserved | 
+| 10              | Boot Manager               | Reserved | 
+| 11              | BitLocker access control   | BitLocker access control | 
+| 12              | Reserved                   | Data events and highly volatile events | 
+| 13              | Reserved                   | Boot Module Details | 
+| 14              | Reserved                   | Boot Authorities | 
 
-  --------------- -------------------------- ----------------------------------------
-  **PCR Index**   **PCR Usage (Legacy)**     **PCR Usage (UEFI)**
-  8               NTFS Boot Sector           Reserved
-  9               NTFS Boot Block            Reserved
-  10              Boot Manager               Reserved
-  11              BitLocker access control   BitLocker access control
-  12              Reserved                   Data events and highly volatile events
-  13              Reserved                   Boot Module Details
-  14              Reserved                   Boot Authorities
-  --------------- -------------------------- ----------------------------------------
+(Source: [Windows BitLocker](https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings))

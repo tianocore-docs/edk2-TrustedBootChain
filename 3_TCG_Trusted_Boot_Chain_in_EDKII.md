@@ -70,8 +70,6 @@ described in the following table.
 
 ###### Table 1 TPM PCR Usage 
 
-(Source: [TCG PFP Specification](https://trustedcomputinggroup.org/resource/pc-client-specific-platform-firmware-profile-specification/))
-
 | **PCR Index** | **PCR Usage** |
 | --------------| ---------------------------------------------------------------------------|
 | 0             | SRTM, BIOS, Host Platform Extensions, Embedded Option ROMs and PI Drivers |
@@ -82,6 +80,8 @@ described in the following table.
 | 5             | Boot Manager Code Configuration and Data (for use by the Boot Manager Code) and GPT/Partition Table |
 | 6             | Host Platform Manufacturer Specific |
 | 7             | Secure Boot Policy, Secure boot Verification Authority |
+
+(Source: [TCG PFP Specification](https://trustedcomputinggroup.org/resource/pc-client-specific-platform-firmware-profile-specification/))
 
 The following figure shows the high-level components and measurements.
 
