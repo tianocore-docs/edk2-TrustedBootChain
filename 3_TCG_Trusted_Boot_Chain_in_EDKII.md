@@ -51,7 +51,7 @@ PCR, Measurement, and Attestation
 The TPM PCRs hold the values of the data measurement. The measurement
 follows the equation below. This operation is PCR extend.
 
-*PCR ~(new)~ = HASH (PCR~(old)~ \|\| HASH(Data))*
+**PCR <sub>(new)</sub> = HASH (PCR <sub>(old)</sub> \|\| HASH(Data))**
 
 PCR extend is the only way to modify the PCR value. If a platform
 extends a PCR multiple times, all data is hashed into the PCR. The
