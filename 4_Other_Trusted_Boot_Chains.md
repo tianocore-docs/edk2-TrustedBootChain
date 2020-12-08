@@ -122,33 +122,32 @@ from platform firmware into the OS. Table 4 shows the PCR usage in Grub.
 
 (Source: [Grub2 Measured Boot](https://www.gnu.org/software/grub/manual/grub/html_node/Measured-Boot.html))
 
-+---------------+-----------------------------------------------------+
+
 | **PCR Index** | **PCR Usage**                                       |
-+---------------+-----------------------------------------------------+
+|---------------|-----------------------------------------------------|
 | 8             | Grub command line:                                  |
 |               |                                                     |
 |               | All executed commands (including those from         |
 |               | configuration files) will be logged and measured as |
 |               | entered with a prefix of "grub cmd: "               |
-+---------------+-----------------------------------------------------+
+|---------------|-----------------------------------------------------|
 | 8             | Kernel command line:                                |
 |               |                                                     |
 |               | Any command line passed to a kernel will be logged  |
 |               | and measured as entered with a prefix of            |
 |               | "kernel cmdline: "                                  |
-+---------------+-----------------------------------------------------+
+|---------------|-----------------------------------------------------|
 | 8             | Module command line:                                |
 |               |                                                     |
 |               | Any command line passed to a kernel module will be  |
 |               | logged and measured as entered with a prefix of     |
 |               | "module cmdline: "                                  |
-+---------------+-----------------------------------------------------+
+|---------------|-----------------------------------------------------|
 | 9             | Files:                                              |
 |               |                                                     |
 |               | Any file read by GRUB will be logged and measured   |
 |               | with a descriptive text corresponding to the        |
 |               | filename.                                           |
-+---------------+-----------------------------------------------------+
 
 Grub2
 [tpm.h](https://github.com/rhboot/grub2/blob/master/include/grub/tpm.h)
