@@ -108,7 +108,7 @@ Specification](https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerMa
 | 16              | Debug | 
 | 17-23           | Reserved for future | 
 
-(Source: [TCG Server(https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf))]
+(Source: [TCG Server](https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf))
 
 Secure communication -- SPDM
 ----------------------------
