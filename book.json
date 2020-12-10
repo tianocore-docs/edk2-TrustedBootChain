@@ -1,6 +1,5 @@
 {
   "variables" : {
-    "draft"   : "yes",
     "title"   : "Understanding the Trusted Boot Chain Implementation",
     "version" : "Revision 1.0"
   },
