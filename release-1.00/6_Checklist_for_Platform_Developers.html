@@ -1,0 +1,566 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Checklist for Platform Developers · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="7_Glossary.html" />
+    
+    
+    <link rel="prev" href="5_Looking_Forward.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Understanding the Trusted Boot Chain Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="TABLES.html">
+            
+                <a href="TABLES.html">
+            
+                    
+                    Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="FIGURES.html">
+            
+                <a href="FIGURES.html">
+            
+                    
+                    Figures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="1_Executive_Summary.html">
+            
+                <a href="1_Executive_Summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2_Overview.html">
+            
+                <a href="2_Overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="3_TCG_Trusted_Boot_Chain_in_EDKII.html">
+            
+                <a href="3_TCG_Trusted_Boot_Chain_in_EDKII.html">
+            
+                    
+                    TCG Trusted Boot Chain in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="4_Other_Trusted_Boot_Chains.html">
+            
+                <a href="4_Other_Trusted_Boot_Chains.html">
+            
+                    
+                    Other Trusted Boot Chains
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="5_Looking_Forward.html">
+            
+                <a href="5_Looking_Forward.html">
+            
+                    
+                    Looking Forward
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.9" data-path="6_Checklist_for_Platform_Developers.html">
+            
+                <a href="6_Checklist_for_Platform_Developers.html">
+            
+                    
+                    Checklist for Platform Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="7_Glossary.html">
+            
+                <a href="7_Glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="8_References.html">
+            
+                <a href="8_References.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Checklist for Platform Developers</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Understanding the Trusted Boot Chain Implementation</div>
+        <div style="text-align:right">Revision 1.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  Understanding the Trusted Boot Chain Implementation
+
+  Copyright (c) 2020, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="checklist-for-platform-developers">Checklist for Platform Developers</h1>
+<h2 id="pcr-measurement-and-attestation">PCR, Measurement and Attestation</h2>
+<h3 id="general-guideline">General Guideline</h3>
+<p>1.1.1. Use an <strong>even PCR for code</strong> measurement in general.</p>
+<p>1.1.2. Use an <strong>odd PCR for data</strong> measurement in general.</p>
+<p>1.1.3. Do <strong>NOT</strong> record data that <strong>that are dynamic and changeable
+across the boot</strong>, such as system clock, fan speed, boot count, system
+reset reason, battery power, a nonce value, a pointer, etc.</p>
+<p>1.1.4. Do <strong>NOT</strong> record the <strong>instance of specific information that may
+be used to unique identify a system</strong>, such as an asset tag, a serial
+number, etc.</p>
+<p>1.1.5. Do <strong>NOT</strong> record <strong>any privacy sensitive information</strong>.</p>
+<h3 id="pcr-0">PCR 0</h3>
+<p>1.2.1. Do configure
+<a href="https://github.com/tianocore/edk2/blob/master/MdeModulePkg/MdeModulePkg.dec" target="_blank">PcdTcgPfpMeasurementRevision</a>
+to select TCG PFP compliance revision.</p>
+<p>1.2.2. Do configure
+<a href="https://github.com/tianocore/edk2/blob/master/MdeModulePkg/MdeModulePkg.dec" target="_blank">PcdFirmwareVersionString</a>
+to a valid Unicode string for version, so that it can be measured.</p>
+<p>1.2.3. Do report <strong>all FV information</strong> in PEI, so that all of them can
+be measured.</p>
+<p>1.2.4. Do install
+<a href="https://github.com/tianocore/edk2/blob/master/SecurityPkg/Include/Ppi/FirmwareVolumeInfoMeasurementExcluded.h" target="_blank">EFI_PEI_FIRMWARE_VOLUME_INFO_MEASUREMENT_EXCLUDED_PPI</a>
+for the FV that is ready measured.</p>
+<p>1.2.5. Do measure individual non-FV component, if it is loaded from the
+platform firmware.</p>
+<p>1.2.6. Do NOT update the loaded component before measuring it.</p>
+<p>1.2.7. Do measure the non-host platform information using
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_NONHOST_INFO</a>,
+if it exists.</p>
+<p>1.2.8. Do measure the non-host platform component using
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_NONHOST_CODE</a>
+if it can only be updated by the platform firmware.</p>
+<h3 id="pcr-1">PCR 1</h3>
+<p>1.3.1. Do measure Microcode.</p>
+<p>1.3.2. Do measure SMBIOS table after filtering changeable data or
+instance data.</p>
+<p>1.3.3. Do measure &quot;Entering ROM Based Setup&quot; with
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_ACTION</a>
+for a setup utility.</p>
+<p>1.3.4. Do measure security related configuration data from non-volatile
+storage, such as UEFI setup variable, or CMOS.</p>
+<p>1.3.5. Do measure the hardware device list with
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_TABLE_OF_DEVICES</a>.</p>
+<p>1.3.6. Do measure the non-host platform configuration using
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_NONHOST_CONFIG</a>
+if it can only be updated by the platform firmware.</p>
+<h3 id="pcr-2">PCR 2</h3>
+<p>1.4.1. Do link
+<a href="https://github.com/tianocore/edk2/tree/master/SecurityPkg/Library/DxeTpm2MeasureBootLib" target="_blank">DxeTpm2MeasureBootLib</a>
+as <strong>LAST</strong> NULL instance lib for SecurityStubDxe.inf in a DSC file.</p>
+<p>1.4.2. Do measure the non-host platform component using
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_NONHOST_CODE</a>
+if it can be updated by entities other than the platform firmware.</p>
+<p>1.4.3. Do measure SPDM-capable device hardware or firmware use
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_EFI_SPDM_FIRMWARE_BLOB</a>.</p>
+<h3 id="pcr-3">PCR 3</h3>
+<p>1.5.1. Do measure &quot;Entering ROM Based Setup&quot; with
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_ACTION</a>
+for a UEFI application based setup utility.</p>
+<p>1.5.2. Do measure the non-host platform configuration using
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_NONHOST_CONFIG</a>
+if it can be updated by entities other than the platform firmware.</p>
+<p>1.5.3. Do measure SPDM-capable device hardware configuration or firmware
+configuration use
+<a href="https://github.com/tianocore/edk2/blob/master/MdePkg/Include/IndustryStandard/UefiTcgPlatform.h" target="_blank">EV_EFI_SPDM_FIRMWARE_CONFIG</a>.</p>
+<h3 id="pcr-4">PCR 4</h3>
+<p>1.6.1. Do measure the additional pre-OS code loaded by an UEFI
+application the using EV_COMPACT_HASH.</p>
+<h3 id="pcr-5">PCR 5</h3>
+<p>1.7.1 Do measure the additional data configuration related to the UEFI
+application.</p>
+<h3 id="pcr-6">PCR 6</h3>
+<p>N/A</p>
+<h3 id="pcr-7">PCR 7</h3>
+<p>1.9.1. Do measure <strong>security configuration</strong> if it exits. (It means the
+whole policy.)</p>
+<p>1.9.2. Do measure <strong>security authority</strong> if it exits. (It means the
+specific policy which is used to verify the component.)</p>
+<p>1.9.3. Do measure the security feature disabling event, such as &quot;UEFI
+Debug Mode&quot;, &quot;DMA Protection Disabled&quot;.</p>
+<h3 id="noaction-event">NO_ACTION event</h3>
+<p>1.10.1. Do record startup locality event, if an ACM starts the TPM.</p>
+<h2 id="tpm-device-startup">TPM Device Startup</h2>
+<h3 id="device-selection">Device Selection</h3>
+<p>2.1.1. Do NOT support TPM1.2.</p>
+<p>2.1.2. Do choose a proper Tcg2Config driver for device selection, such
+as
+<a href="https://github.com/tianocore/edk2/tree/master/SecurityPkg/Tcg/Tcg2Config" target="_blank">Tcg2Config</a>
+or platform specific one.</p>
+<p>2.1.3. Do set
+<a href="https://github.com/tianocore/edk2/blob/master/SecurityPkg/SecurityPkg.dec" target="_blank">PcdTpmInstanceGuid</a>
+directly after the TPM device selection.</p>
+<p>2.1.4. Do set
+<a href="https://github.com/tianocore/edk2/blob/master/SecurityPkg/SecurityPkg.dec" target="_blank">PcdTpm2InitializationPolicy</a>
+if the TPM device is started.</p>
+<h3 id="tpm-device-interface">TPM Device Interface</h3>
+<p>2.2.1. Do link proper
+<a href="https://github.com/tianocore/edk2/blob/master/SecurityPkg/Include/Library/Tpm2DeviceLib.h" target="_blank">Tpm2DeviceLib</a>
+to Tcg2Dxe.inf and Tcg2Pei.inf in platform DSC, such as
+<a href="https://github.com/tianocore/edk2/tree/master/SecurityPkg/Library/Tpm2DeviceLibDTpm" target="_blank">Tpm2DeviceLibDTpm</a>
+or other TPM device such as I2C.</p>
+<h3 id="error-handling">Error Handling</h3>
+<p>2.3.1. Do register a ReportStatusCode callback handler to process the
+TPM error, if the platform wants to reset system, or disable the TPM
+hardware on error.</p>
+<h2 id="tcg-physical-presence">TCG Physical Presence</h2>
+<p>3.1.1. Do call <strong>Tcg2PhysicalPresenceLibNeedUserConfirm</strong>() and
+<strong>Tcg2PhysicalPresenceLibProcessRequest</strong>() in the platform BDS before
+EndOfDxe.</p>
+<p>3.1.2. Do <strong>connect all trusted consoles</strong> if
+<strong>Tcg2PhysicalPresenceLibNeedUserConfirm</strong>() is TRUE.</p>
+<h3 id="tpm-bank-selection">TPM Bank Selection</h3>
+<p>3.2.1. Do choose
+<a href="https://github.com/tianocore/edk2/tree/master/SecurityPkg/Library/HashLibBaseCryptoRouter" target="_blank">HashLibBaseCryptoRouter</a>
+if the platform wants to support crypto agile.</p>
+<p>3.2.2. Do link proper multiple HashLib instances, such as
+<a href="https://github.com/tianocore/edk2/tree/master/SecurityPkg/Library/HashInstanceLibSha256" target="_blank">HashInstanceLibSha256</a>,
+<a href="https://github.com/tianocore/edk2/tree/master/SecurityPkg/Library/HashInstanceLibSha384" target="_blank">HashInstanceLibSha384</a>,
+<a href="https://github.com/tianocore/edk2/tree/master/SecurityPkg/Library/HashInstanceLibSha512" target="_blank">HashInstanceLibSha512</a>
+and
+<a href="https://github.com/tianocore/edk2/tree/master/SecurityPkg/Library/HashInstanceLibSm3" target="_blank">HashInstanceLibSm3</a>,
+to Tcg2Pei.inf and Tcg2Dxe.inf in platform DSC.</p>
+<p>3.2.3. Do NOT use
+<a href="https://github.com/tianocore/edk2/tree/master/SecurityPkg/Library/HashInstanceLibSha1" target="_blank">HashInstanceLibSha1</a>.</p>
+<h3 id="tpm-hierarchy-management">TPM Hierarchy Management</h3>
+<p>3.3.1. Do choose a proper Tcg2Platform module to manage the TPM platform
+hierarchy, such as
+<a href="https://github.com/tianocore/edk2-platforms/tree/master/Platform/Intel/MinPlatformPkg/Tcg" target="_blank">Tcg2Platform</a>
+or platform specific one.</p>
+<p>3.3.2. Do randomize TPM platform auth before EndOfDxe.</p>
+<p>3.3.3. Do randomize TPM platform auth before EndOfPei in S3 resume, if
+TPM error happens.</p>
+<p>3.3.4. Do send <strong>Tpm2HierarchyControl</strong>() command to enable or disable
+the hierarchy, if it is supported.</p>
+<h2 id="tcg-memory-override">TCG Memory Override</h2>
+<p>4.1.1. Do check MOR variable and clear memory in memory initialization
+if MOR request is set.</p>
+<p>4.1.2. Do treat MOR variable missing as requested.</p>
+<h2 id="os-interface">OS Interface</h2>
+<h3 id="acpi-table">ACPI Table</h3>
+<p>5.1.1. Do configure
+<a href="https://github.com/tianocore/edk2/blob/master/SecurityPkg/SecurityPkg.dec" target="_blank">PcdTpm2AcpiTableRev</a>
+to indicate TPM2 ACPI table version.</p>
+<p>5.1.2. Do configure
+<a href="https://github.com/tianocore/edk2/blob/master/MdeModulePkg/MdeModulePkg.dec" target="_blank">PcdTpmPlatformClass</a>
+for client or server.</p>
+<p>5.1.3. Do configure
+<a href="https://github.com/tianocore/edk2/blob/master/SecurityPkg/SecurityPkg.dec" target="_blank">PcdTcgPhysicalPresenceInterfaceVer</a>
+to indicate the TCG Physical Presence Interface version.</p>
+<p>5.1.4. Do configure
+<a href="https://github.com/tianocore/edk2/blob/master/SecurityPkg/SecurityPkg.dec" target="_blank">PcdTpm2CurrentIrqNum</a>
+and
+<a href="https://github.com/tianocore/edk2/blob/master/SecurityPkg/SecurityPkg.dec" target="_blank">PcdTpm2PossibleIrqNumBuf</a>
+to indicate the TPM IRQ information.</p>
+<h3 id="tcg2protocol">TCG2_PROTOCOL</h3>
+<p>N/A</p>
+<h2 id="tcg-storage">TCG Storage</h2>
+<h3 id="opal-password">OPAL Password</h3>
+<p>6.1.1. Do <strong>connect trusted storages and trusted consoles</strong> in Platform
+BDS before EndOfDxe if there is OPAL password request.</p>
+<p>6.1.2. Do include storage disk drivers in PEI for S3 auto-unlock.</p>
+<h3 id="opal-feature">OPAL Feature</h3>
+<p>6.2.1. Do <strong>connect trusted storages and trusted consoles</strong> in Platform
+BDS before EndOfDxe if there is OPAL feature request.</p>
+<h3 id="blocksid">BlockSid</h3>
+<p>6.3.1. Do enable BlockSid by default.</p>
+<h3 id="tper-reset">TPer reset</h3>
+<p>6.4.1. Do <strong>connect trusted storages</strong> in Platform BDS before EndOfDxe
+if MOR request is set.</p>
+<p>6.4.2. Do treat MOR variable missing as requested.</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Understanding the Trusted Boot Chain Implementation</div>
+        <div style="text-align:right">Revision 1.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="5_Looking_Forward.html" class="navigation navigation-prev " aria-label="Previous page: Looking Forward">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="7_Glossary.html" class="navigation navigation-next " aria-label="Next page: Glossary">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Checklist for Platform Developers","level":"1.9","depth":1,"next":{"title":"Glossary","level":"1.10","depth":1,"path":"7_Glossary.md","ref":"7_Glossary.md","articles":[]},"previous":{"title":"Looking Forward","level":"1.8","depth":1,"path":"5_Looking_Forward.md","ref":"5_Looking_Forward.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"Understanding the Trusted Boot Chain Implementation","version":"Revision 1.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"6_Checklist_for_Platform_Developers.md","mtime":"2021-03-30T15:24:27.190Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-30T15:25:04.251Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,540 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Looking Forward · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6_Checklist_for_Platform_Developers.html" />
+    
+    
+    <link rel="prev" href="4_Other_Trusted_Boot_Chains.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Understanding the Trusted Boot Chain Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="TABLES.html">
+            
+                <a href="TABLES.html">
+            
+                    
+                    Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="FIGURES.html">
+            
+                <a href="FIGURES.html">
+            
+                    
+                    Figures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="1_Executive_Summary.html">
+            
+                <a href="1_Executive_Summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2_Overview.html">
+            
+                <a href="2_Overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="3_TCG_Trusted_Boot_Chain_in_EDKII.html">
+            
+                <a href="3_TCG_Trusted_Boot_Chain_in_EDKII.html">
+            
+                    
+                    TCG Trusted Boot Chain in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="4_Other_Trusted_Boot_Chains.html">
+            
+                <a href="4_Other_Trusted_Boot_Chains.html">
+            
+                    
+                    Other Trusted Boot Chains
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8" data-path="5_Looking_Forward.html">
+            
+                <a href="5_Looking_Forward.html">
+            
+                    
+                    Looking Forward
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="6_Checklist_for_Platform_Developers.html">
+            
+                <a href="6_Checklist_for_Platform_Developers.html">
+            
+                    
+                    Checklist for Platform Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="7_Glossary.html">
+            
+                <a href="7_Glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="8_References.html">
+            
+                <a href="8_References.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Looking Forward</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Understanding the Trusted Boot Chain Implementation</div>
+        <div style="text-align:right">Revision 1.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  Understanding the Trusted Boot Chain Implementation
+
+  Copyright (c) 2020, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="looking-forward">Looking Forward</h1>
+<p>In trusted boot, the goal of the measurement is to support attestation
+later. The TPM implements the root of trust for storage (RTS) and the
+root of trust for reporting (RTR). The root of trust for measurement
+(RTM) can be implemented in static RTM (SRTM) or dynamic RTM (DRTM).
+From a platform perspective, there are other ways to implement the
+measurement and attestation.</p>
+<h2 id="platform-root-of-trust---cerberus">Platform Root of Trust - Cerberus</h2>
+<p>A platform root of trust (RoT) is an entity to authenticate the firmware
+on the platform. One example is the OCP Project
+<a href="https://github.com/opencomputeproject/Project_Olympus/blob/master/Project_Cerberus" target="_blank">Cerberus</a>.
+The platform RoT may also collect measurements from the devices and
+support remote attestation. Figure 14 shows the concept of platform RoT.</p>
+<h6 id="figure-14-platform-root-of-trust">Figure 14 Platform Root of Trust</h6>
+<p><img src="media/image14.png" alt=""></p>
+<h2 id="device-root-of-trust---dice">Device Root of Trust - DICE</h2>
+<p>A device root of trust (RoT) is the RoT for a specific device to verify
+the mutable firmware and report the measurement. TCG defines the Device
+Identifier Composition Engine (DICE) architecture for embedded devices
+which do not have full TPM capability but still want to support
+attestation. DICE uses a layering architecture. A layered TCB
+architecture uses a constrained set of TCB capabilities to construct the
+next TCB layer. Figure 15 shows the DICE asymmetric attestation
+architecture. Similar to the TPM certificate, a DICE device can present
+a DICE certificate as the identity for the device. Figure 16 shows the
+DICE symmetric attestation architecture, which may be used in a resource
+constrain environment. For more detail, please refer to <a href="https://trustedcomputinggroup.org/work-groups/dice-architectures/" target="_blank">TCG DICE
+architecture</a>.</p>
+<h6 id="figure-15-dice-implicit-identity-based-attestation">Figure 15 DICE implicit identity based attestation</h6>
+<p><img src="media/image15.png" alt=""></p>
+<p>(source: <a href="https://trustedcomputinggroup.org/resource/implicit-identity-based-device-attestation/" target="_blank">DICE Identity</a>)</p>
+<h6 id="figure-16-dice-symmetric-identity-based-attestation">Figure 16 DICE symmetric identity based attestation</h6>
+<p><img src="media/image16.png" alt=""></p>
+<p>(source: <a href="https://trustedcomputinggroup.org/resource/symmetric-identity-based-device-attestation/" target="_blank">DICE symmetric Identity</a>)</p>
+<h2 id="server-management-domain-firmware">Server Management Domain Firmware</h2>
+<p>A server management domain (such as Baseboard Management Controller,
+also known as BMC) may have its own TPM module and SRTM because of its
+isolated execution environment. Table 7 shows the TPM PCR usage in a
+server management domain. For more details, please refer to <a href="https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf" target="_blank">TCG Server
+Management Domain Firmware
+Specification</a>.</p>
+<h6 id="table-7-tpm-pcr-usage-in-management-domain">Table 7 TPM PCR Usage in Management Domain</h6>
+<table>
+<thead>
+<tr>
+<th><strong>PCR Index</strong></th>
+<th><strong>PCR Usage</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>SRTM and Boot Loader</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Management Domain Configuration</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Loadable Devices</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Loadable Devices Configuration</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Reserved for future</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Reserved for future</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Vendor Specific</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Reserved for future</td>
+</tr>
+<tr>
+<td>8</td>
+<td>For management domain OS</td>
+</tr>
+<tr>
+<td>9</td>
+<td>For management domain OS configuration</td>
+</tr>
+<tr>
+<td>10-15</td>
+<td>Reserved for future</td>
+</tr>
+<tr>
+<td>16</td>
+<td>Debug</td>
+</tr>
+<tr>
+<td>17-23</td>
+<td>Reserved for future</td>
+</tr>
+</tbody>
+</table>
+<p>(Source: <a href="https://trustedcomputinggroup.org/wp-content/uploads/TCG_ServerManagementDomainFirmwareProfile_v1p00_11aug2020.pdf" target="_blank">TCG Server</a>)</p>
+<h2 id="secure-communication----spdm">Secure communication -- SPDM</h2>
+<p>Now we have multiple device entities on the platform. We need a secure
+communication mechanism. The Desktop Management Taskforce (DMTF) Secure
+Protocol and Data Model (SPDM) serves that purpose. SPDM defines message
+formats, data objects, and sequences for performing message exchanges.
+The protocols defined by SPDM can be used for a wide range of security
+functions. The SPDM protocol is similar to the network Transport Layer
+Security (TLS) protocol, but it is customized for the communication
+between two device entities.</p>
+<p>SPDM 1.0 defines messages for hardware and firmware identification and
+authentication, including messages for hardware and firmware measurement
+collection and attestation. See Figure 17. SPDM 1.1 defines a secure
+session establishment mechanism between two entities by using Diffie
+Hellman ephemeral (DHE) or Elliptic Curve DHE (ECDHE) key exchange with
+asymmetric authentication such as RSA or Elliptic Curve Digital
+Signature Algorithm (ECDSA). For a device that only supports symmetric
+cryptography, the secure session can also be established with a
+pre-shared key (PSK). Once the session is created, two entities can use
+Authentication Encryption and Associated Data (AEAD) for message
+communication. See Figure 18. For more detail, please refer to <a href="https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf" target="_blank">DMTF
+SPDM
+Specification</a>.</p>
+<h6 id="figure-17-spdm-10">Figure 17 SPDM 1.0</h6>
+<p><img src="media/image17.png" alt=""></p>
+<p>(source:<a href="https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf" target="_blank">SPDM</a>)</p>
+<h6 id="figure-18-spdm-11">Figure 18 SPDM 1.1</h6>
+<p><img src="media/image18.png" alt=""></p>
+<p>(source: <a href="https://www.dmtf.org/sites/default/files/standards/documents/DSP0274_1.1.0.pdf" target="_blank">SPDM</a>)</p>
+<p>Currently <a href="https://github.com/jyao1/openspdm" target="_blank">openspdm</a> project provides
+an open source tool to validate the SPDM implementation and some sample
+code for explaining the SPDM concept. Figure 4-4 shows the openspdm
+internal design.</p>
+<h6 id="figure-19-openspdm-design">Figure 19 Openspdm Design</h6>
+<p><img src="media/image19.png" alt=""></p>
+<p>(Source: <a href="https://github.com/jyao1/openspdm/blob/master/Doc/Design.md" target="_blank">openspdmdoc</a>)</p>
+<h2 id="an-open-trusted-platform----putting-it-all-together">An Open Trusted Platform -- Putting it all together</h2>
+<p>To put all of the above technology together, Figure 4-5 shows an example
+of an open trusted platform.</p>
+<h6 id="figure-20-an-open-trusted-platform">Figure 20 An Open Trusted Platform</h6>
+<p><img src="media/image20.png" alt=""></p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Understanding the Trusted Boot Chain Implementation</div>
+        <div style="text-align:right">Revision 1.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="4_Other_Trusted_Boot_Chains.html" class="navigation navigation-prev " aria-label="Previous page: Other Trusted Boot Chains">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6_Checklist_for_Platform_Developers.html" class="navigation navigation-next " aria-label="Next page: Checklist for Platform Developers">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Looking Forward","level":"1.8","depth":1,"next":{"title":"Checklist for Platform Developers","level":"1.9","depth":1,"path":"6_Checklist_for_Platform_Developers.md","ref":"6_Checklist_for_Platform_Developers.md","articles":[]},"previous":{"title":"Other Trusted Boot Chains","level":"1.7","depth":1,"path":"4_Other_Trusted_Boot_Chains.md","ref":"4_Other_Trusted_Boot_Chains.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"Understanding the Trusted Boot Chain Implementation","version":"Revision 1.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"5_Looking_Forward.md","mtime":"2021-03-30T15:24:27.190Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-30T15:25:04.251Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

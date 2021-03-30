@@ -1,0 +1,447 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Glossary · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="8_References.html" />
+    
+    
+    <link rel="prev" href="6_Checklist_for_Platform_Developers.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Understanding the Trusted Boot Chain Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="TABLES.html">
+            
+                <a href="TABLES.html">
+            
+                    
+                    Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="FIGURES.html">
+            
+                <a href="FIGURES.html">
+            
+                    
+                    Figures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="1_Executive_Summary.html">
+            
+                <a href="1_Executive_Summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2_Overview.html">
+            
+                <a href="2_Overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="3_TCG_Trusted_Boot_Chain_in_EDKII.html">
+            
+                <a href="3_TCG_Trusted_Boot_Chain_in_EDKII.html">
+            
+                    
+                    TCG Trusted Boot Chain in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="4_Other_Trusted_Boot_Chains.html">
+            
+                <a href="4_Other_Trusted_Boot_Chains.html">
+            
+                    
+                    Other Trusted Boot Chains
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="5_Looking_Forward.html">
+            
+                <a href="5_Looking_Forward.html">
+            
+                    
+                    Looking Forward
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="6_Checklist_for_Platform_Developers.html">
+            
+                <a href="6_Checklist_for_Platform_Developers.html">
+            
+                    
+                    Checklist for Platform Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.10" data-path="7_Glossary.html">
+            
+                <a href="7_Glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="8_References.html">
+            
+                <a href="8_References.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Glossary</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Understanding the Trusted Boot Chain Implementation</div>
+        <div style="text-align:right">Revision 1.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  Understanding the Trusted Boot Chain Implementation
+
+  Copyright (c) 2020, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="glossary">Glossary</h1>
+<p>ACM -- Authenticated Code Module (Intel)</p>
+<p>AEAD -- Authenticated Encryption with Associated Data</p>
+<p>APCI -- Advanced Power and Configuration Interface</p>
+<p>CoSWID -- Concise SWID</p>
+<p>CCC -- Confidential Computing Consortium</p>
+<p>CRB -- Command Response Buffer</p>
+<p>DHE -- Diffie-Hellman ephemeral (key exchange)</p>
+<p>DICE -- Device Identifier Composition Engine</p>
+<p>DMA -- Direct Memory Access</p>
+<p>DRTM -- Dynamic Root of Trust for Measurement</p>
+<p>ECDHE -- Elliptic Curve DHE (key exchange)</p>
+<p>ECDSA -- Elliptic Curve Digital Signature Algorithm</p>
+<p>FIM -- Firmware Integrity Measurement</p>
+<p>GP -- Global Platform</p>
+<p>IBV -- Independent BIOS Vendor</p>
+<p>IFV -- Independent Firmware Vendor</p>
+<p>IHV -- Independent Hardware Vendor</p>
+<p>ISV -- Independent Silicon Vendor</p>
+<p>MAC -- Message Authentication Code</p>
+<p>MMIO -- Memory Mapped I/O</p>
+<p>MOR -- Memory Overwrite</p>
+<p>MSID -- Manufactured SID</p>
+<p>ODM -- Original Design Manufacturer</p>
+<p>OEM -- Original Equipment Manufacturer</p>
+<p>OSV -- Operating System Vendor</p>
+<p>PFP -- TCG Platform Firmware Profile specification</p>
+<p>PI -- Platform Initialization (UEFI)</p>
+<p>PP -- Physical Presence</p>
+<p>PSID -- Physical Presence SID</p>
+<p>PSK -- Pre-shared key</p>
+<p>PTP --Platform TPM Profile</p>
+<p>RIM -- TCG Reference Integrity Manifest</p>
+<p>RoT -- Root of Trust</p>
+<p>RSA -- Rivest Shamir Adlemann (algorithm)</p>
+<p>RTM -- Root of Trust for Measurement</p>
+<p>SID -- TCG Storage Secure Identifier</p>
+<p>SMBIOS -- DMTF System Management BIOS</p>
+<p>SMM -- x86 System Management Mode.</p>
+<p>SP -- Storage Security Provider</p>
+<p>SPDM -- Secure Protocol and Data Model (DMTF)</p>
+<p>SRTM -- Static Root of Trust for Measurement</p>
+<p>SWID -- Software Identification</p>
+<p>TCB -- Trust Computing Base</p>
+<p>TCG -- Trust Computing Group</p>
+<p>TEE -- Trusted Execution Environment</p>
+<p>TLS -- Transport Layer Security</p>
+<p>TPer -- Trusted Peripheral</p>
+<p>TPM -- Trust Platform Module</p>
+<p>TSS -- TPM Software Stack</p>
+<p>TZ -- TrustZone (ARM)</p>
+<p>UEFI -- Unified Extensible Firmware Interface</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Understanding the Trusted Boot Chain Implementation</div>
+        <div style="text-align:right">Revision 1.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="6_Checklist_for_Platform_Developers.html" class="navigation navigation-prev " aria-label="Previous page: Checklist for Platform Developers">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="8_References.html" class="navigation navigation-next " aria-label="Next page: References">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Glossary","level":"1.10","depth":1,"next":{"title":"References","level":"1.11","depth":1,"path":"8_References.md","ref":"8_References.md","articles":[]},"previous":{"title":"Checklist for Platform Developers","level":"1.9","depth":1,"path":"6_Checklist_for_Platform_Developers.md","ref":"6_Checklist_for_Platform_Developers.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"title":"Understanding the Trusted Boot Chain Implementation","version":"Revision 1.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"7_Glossary.md","mtime":"2021-03-30T15:24:27.190Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-30T15:25:04.251Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
