@@ -1,0 +1,660 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Other Trusted Boot Chains · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="5_Looking_Forward.html" />
+    
+    
+    <link rel="prev" href="3_TCG_Trusted_Boot_Chain_in_EDKII.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Understanding the Trusted Boot Chain Implementation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="TABLES.html">
+            
+                <a href="TABLES.html">
+            
+                    
+                    Tables
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="FIGURES.html">
+            
+                <a href="FIGURES.html">
+            
+                    
+                    Figures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="1_Executive_Summary.html">
+            
+                <a href="1_Executive_Summary.html">
+            
+                    
+                    Executive Summary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="2_Overview.html">
+            
+                <a href="2_Overview.html">
+            
+                    
+                    Overview
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="3_TCG_Trusted_Boot_Chain_in_EDKII.html">
+            
+                <a href="3_TCG_Trusted_Boot_Chain_in_EDKII.html">
+            
+                    
+                    TCG Trusted Boot Chain in EDK II
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.7" data-path="4_Other_Trusted_Boot_Chains.html">
+            
+                <a href="4_Other_Trusted_Boot_Chains.html">
+            
+                    
+                    Other Trusted Boot Chains
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="5_Looking_Forward.html">
+            
+                <a href="5_Looking_Forward.html">
+            
+                    
+                    Looking Forward
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="6_Checklist_for_Platform_Developers.html">
+            
+                <a href="6_Checklist_for_Platform_Developers.html">
+            
+                    
+                    Checklist for Platform Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="7_Glossary.html">
+            
+                <a href="7_Glossary.html">
+            
+                    
+                    Glossary
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="8_References.html">
+            
+                <a href="8_References.html">
+            
+                    
+                    References
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Other Trusted Boot Chains</a>
+    </h1>
+</div>
+<div>
+    <!-- 
+    <img style="float:left; align:middle; height:2em" src="media/TianocoreTitlePageLogo.jpg"/>
+     -->
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Understanding the Trusted Boot Chain Implementation</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/30/2021 03:24:01]</div>
+        <div style="text-align:right">Revision 1.0</div>
+      </h2>  
+    
+    <hr>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+                                <section class="normal markdown-section">
+                                
+                                <!--- @file
+  Understanding the Trusted Boot Chain Implementation
+
+  Copyright (c) 2020, Intel Corporation. All rights reserved.<BR>
+
+  Redistribution and use in source (original document form) and 'compiled'
+  forms (converted to PDF, epub, HTML and other formats) with or without
+  modification, are permitted provided that the following conditions are met:
+
+  1) Redistributions of source code (original document form) must retain the
+     above copyright notice, this list of conditions and the following
+     disclaimer as the first lines of this file unmodified.
+
+  2) Redistributions in compiled form (transformed to other DTDs, converted to
+     PDF, epub, HTML and other formats) must reproduce the above copyright
+     notice, this list of conditions and the following disclaimer in the
+     documentation and/or other materials provided with the distribution.
+
+  THIS DOCUMENTATION IS PROVIDED BY TIANOCORE PROJECT "AS IS" AND ANY EXPRESS OR
+  IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+  MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO
+  EVENT SHALL TIANOCORE PROJECT  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,
+  PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS;
+  OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+  WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR
+  OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS DOCUMENTATION, EVEN IF
+  ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+-->
+<h1 id="other-trusted-boot-chains">Other Trusted Boot chains</h1>
+<p>Besides EDK II, other firmware or firmware related boot loaders also
+include the trusted boot chain.</p>
+<h2 id="coreboot">coreboot</h2>
+<p><a href="https://github.com/coreboot" target="_blank">coreboot</a> includes the measured boot flow.
+It is a simplified version. Table 3 shows the usage in coreboot.</p>
+<h6 id="table-3-coreboot-tpm-pcr-usage">Table 3 Coreboot TPM PCR Usage</h6>
+<table>
+<thead>
+<tr>
+<th><strong>PCR Index</strong></th>
+<th><strong>PCR Usage</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Google vboot GBB flags</td>
+</tr>
+<tr>
+<td>1</td>
+<td>Google vboot GBB HWID</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Core Root of Trust for Measurement (CRTM)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Runtime data like hwinfo.hex or MRC cache.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>5</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>6</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>7</td>
+<td>N/A</td>
+</tr>
+</tbody>
+</table>
+<p>(Source: <a href="https://doc.coreboot.org/security/vboot/measured_boot.html" target="_blank">coreboot measured boot</a>)</p>
+<p><a href="https://github.com/coreboot/vboot" target="_blank">vboot</a><a href="https://github.com/coreboot/vboot/blob/master/firmware/2lib/include/2api.h" target="_blank">2api.h</a>
+defines two PCRs:</p>
+<ul>
+<li><p><strong>BOOT_MODE_PCR</strong>(0) -- It is to record the digest based on the
+current developer and recovery mode flags in the Google Binary Blob
+(GBB)</p>
+</li>
+<li><p><strong>HWID_DIGEST_PCR</strong>(1) -- It is to record the digest of the
+hardware ID (HWID) from the GBB.</p>
+</li>
+</ul>
+<p>In verstage,
+<a href="https://github.com/coreboot/coreboot/blob/master/src/security/vboot/verstage.c" target="_blank">vboot_logic.c</a>
+<strong>verstage_main</strong>() calls <strong>extend_pcrs</strong>() to extend two PCRs.
+<a href="https://github.com/coreboot/coreboot/blob/master/src/security/vboot/tpm_common.c" target="_blank">tpm_common.c</a>
+<strong>vboot_extend_pcr</strong>() calls
+<a href="https://github.com/coreboot/vboot/blob/master/firmware/2lib/2api.c" target="_blank">2api.c</a>
+<strong>vb2api_get_pcr_digest</strong>() to get the corresponding flags and HWID
+digest from the GBB and extends them to the TPM.</p>
+<p>Later, coreboot
+<a href="https://github.com/coreboot/coreboot/blob/master/src/security/tpm/tspi/crtm.h" target="_blank">crtm.h</a>
+defines two PCRs:</p>
+<ul>
+<li><p><strong>TPM_CRTM_PCR</strong>(2) -- It is for Core Root of Trust for
+Measurement (CRTM) modules, including all stages, data and blobs.
+These include COREBOOT CBFS (bootblock, fallback/verstage), FW_MAIN
+CBFS (fallback/romstage, fspm, fallback/postcar, fallback/ramstage,
+cpu_microcode_blob, fsps, vbt, fallback/dsdt.aml,
+fallback/payload), RO_VPD, GBB, SI_DESC, SI_GBE.</p>
+</li>
+<li><p><strong>TPM_RUNTIME_DATA_PCR</strong>(3) -- It is for runtime changeable data.
+Such as CMOS, SI_ME, RW_NVRAM.</p>
+</li>
+</ul>
+<p><a href="https://github.com/coreboot/coreboot/blob/master/src/security/tpm/tspi/crtm.c" target="_blank">crtm.c</a>
+<strong>tspi_measure_cbfs_hook</strong>() is the hook function to measure
+different components in the coreboot file system (CBFS) data. The
+CBFS_TYPE definition can be found at
+<a href="https://github.com/coreboot/coreboot/blob/master/src/commonlib/bsd/include/commonlib/bsd/cbfs_serialized.h" target="_blank">cbfs_serialized.h</a>.
+For example:</p>
+<ul>
+<li><p>CBFS_TYPE_MRC -- PCR2</p>
+</li>
+<li><p>CBFS_TYPE_STAGE -- PCR2</p>
+</li>
+<li><p>CBFS_TYPE_SELF -- PCR2</p>
+</li>
+<li><p>CBFS_TYPE_FIT -- PCR2</p>
+</li>
+<li><p>CBFS_TYPE_MRC_CACHE -- PCR3</p>
+</li>
+<li><p>Other -- runtime data go to PCR3, non-runtime data go to PCR2.</p>
+</li>
+</ul>
+<p>After that,
+<a href="https://github.com/coreboot/coreboot/blob/master/src/security/tpm/tspi/log.c" target="_blank">log.c</a>
+<strong>tcpa_log_add_table_entry</strong>() appends the log to a tcpa table.</p>
+<h2 id="grub2">Grub2</h2>
+<p><a href="https://github.com/rhboot/grub2" target="_blank">Grub2</a> extends the trusted boot chain
+from platform firmware into the OS. Table 4 shows the PCR usage in Grub.</p>
+<h6 id="table-4-grub-tpm-pcr-usage">Table 4 GRUB TPM PCR Usage</h6>
+<table>
+<thead>
+<tr>
+<th><strong>PCR Index</strong></th>
+<th><strong>PCR Usage</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td>Grub command line: All executed commands (including those from configuration files) will be logged and measured as entered with a prefix of &quot;grub cmd: &quot;</td>
+</tr>
+<tr>
+<td></td>
+<td>Kernel command line: Any command line passed to a kernel will be logged and measured as entered with a prefix of &quot;kernel cmdline: &quot;</td>
+</tr>
+<tr>
+<td></td>
+<td>Module command line: Any command line passed to a kernel module will be logged and measured as entered with a prefix of &quot;module cmdline: &quot;</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Files: Any file read by GRUB will be logged and measured with a descriptive text corresponding to the filename.</td>
+</tr>
+</tbody>
+</table>
+<p>(Source: <a href="https://www.gnu.org/software/grub/manual/grub/html_node/Measured-Boot.html" target="_blank">Grub2 Measured Boot</a>)</p>
+<p>Grub2
+<a href="https://github.com/rhboot/grub2/blob/master/include/grub/tpm.h" target="_blank">tpm.h</a>
+defines two PCR index:</p>
+<ul>
+<li><p><strong>GRUB_STRING_PCR</strong>(8) -- It is for the command line string.</p>
+</li>
+<li><p><strong>GRUB_BINARY_PCR</strong>(9) -- It is for a file binary.</p>
+</li>
+</ul>
+<p><a href="https://github.com/rhboot/grub2/blob/master/grub-core/commands/tpm.c" target="_blank">tpm.c</a>
+registers <strong>grub_tpm_verify_string</strong>() and
+<strong>grub_tpm_verify_write</strong>() to a grub_file_verifier structure. They
+will be called by <strong>grub_verify_string</strong>() and
+<strong>grub_verifiers_open</strong>() in
+<a href="https://github.com/rhboot/grub2/blob/master/grub-core/commands/verifiers.c" target="_blank">verifiers.c</a>.</p>
+<p>when grub2 executes a command line such as
+GRUB_VERIFY_MODULE_CMDLINE, GRUB_VERIFY_KERNEL_CMDLINE,
+GRUB_VERIFY_COMMAND or grub_create_loader_cmdline() in
+<a href="https://github.com/rhboot/grub2/blob/master/grub-core/lib/cmdline.c" target="_blank">cmdline.c</a>,
+<strong>grub_verify_string</strong>() is used. Finally,
+<strong>grub_tpm_verify_string</strong>() measures the string to PCR8.</p>
+<p><strong>grub_verifiers_open</strong>() is registered as one of grub_file_filters
+in
+<a href="https://github.com/rhboot/grub2/blob/master/include/grub/file.h" target="_blank">file.h</a>.
+Whenever grub uses
+<a href="https://github.com/rhboot/grub2/blob/master/grub-core/kern/file.c" target="_blank">file.c</a>
+<strong>grub_file_open</strong>() this filter is invoked. Finally,
+<strong>grub_tpm_verify_write</strong>() measures the file binary to PCR9.</p>
+<h2 id="linux-secure-boot-shim">Linux Secure Boot Shim</h2>
+<p><a href="https://github.com/rhboot/shim" target="_blank">Shim</a> is used to extend the UEFI secure
+boot concept to Linux. Table 5 shows the PCR usage in Shim.</p>
+<h6 id="table-5-shim-tpm-pcr-usage">Table 5 Shim TPM PCR Usage</h6>
+<table>
+<thead>
+<tr>
+<th><strong>PCR Index</strong></th>
+<th><strong>PCR Usage</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>4</td>
+<td>UEFI application, such as second_stage, FALLBACK, MOK_MANAGER.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>UEFI variable, such as &quot;MokSBState&quot;. Verification policy authority, such as &quot;Shim&quot;, &quot;db&quot;, &quot;MokList&quot;.</td>
+</tr>
+<tr>
+<td>14</td>
+<td>UEFI variable, such as &quot;MokList&quot;, &quot;MokListX&quot;, &quot;MokSBState&quot;.</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://github.com/rhboot/shim/blob/main/shim.c" target="_blank">shim.c</a>
+<strong>start_image</strong>() supports to execute a UEFI application image, such as
+second_stage, FALLBACK, MOK_MANAGER. It calls <strong>tpm_log_pe</strong>() to
+measure it to PCR4.</p>
+<p><a href="https://github.com/rhboot/shim" target="_blank">Shim</a> defines a set of UEFI variable to
+store the shim variable.
+<a href="https://github.com/rhboot/shim/blob/main/mok.c" target="_blank">mok.c</a>
+<strong>import_mok_state</strong>() checks the mok_state_variables, such as
+&quot;MokList&quot;, &quot;MokListX&quot;, &quot;MokSBState&quot;, &quot;MokDBState&quot;. In which, the
+&quot;MokSBState&quot; variable is measured to PCR7 via
+<strong>tpm_measure_variable</strong>(). The &quot;MokList&quot;, &quot;MokListX&quot;, &quot;MokSBState&quot;
+variables are measured to PCR14 via <strong>tpm_log_event</strong>().</p>
+<p>To follow the UEFI secure boot protocol,
+<a href="https://github.com/rhboot/shim/blob/main/shim.c" target="_blank">shim.c</a>
+<strong>verify_one_signature</strong>() will record &quot;Shim&quot; as the authority via
+<strong>tpm_measure_variable</strong>(), if the <strong>AuthenticodeVerify</strong>() succeeds.
+Also <strong>check_db_cert</strong>()/<strong>check_db_hash</strong>() will record &quot;db&quot;,
+&quot;MokList&quot; as authority if verification succeeds.</p>
+<h2 id="windows-bitlocker">Windows BitLocker</h2>
+<p>Microsoft Windows BitLocker uses the below-listed PCRs. The legacy-boot
+version of Windows used PCR[8, 9, 10, 11], while UEFI-based Windows
+uses PCR[11, 12, 13, 14] for the BitLocker policies. Table 6 shows the
+PCR usage in Windows BitLocker.</p>
+<h6 id="table-6-windows-bitlocker-pcr-usage">Table 6 Windows BitLocker PCR Usage</h6>
+<table>
+<thead>
+<tr>
+<th><strong>PCR Index</strong></th>
+<th><strong>PCR Usage (Legacy)</strong></th>
+<th><strong>PCR Usage (UEFI)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>8</td>
+<td>NTFS Boot Sector</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>9</td>
+<td>NTFS Boot Block</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Boot Manager</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>11</td>
+<td>BitLocker access control</td>
+<td>BitLocker access control</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Reserved</td>
+<td>Data events and highly volatile events</td>
+</tr>
+<tr>
+<td>13</td>
+<td>Reserved</td>
+<td>Boot Module Details</td>
+</tr>
+<tr>
+<td>14</td>
+<td>Reserved</td>
+<td>Boot Authorities</td>
+</tr>
+</tbody>
+</table>
+<p>(Source: <a href="https://docs.microsoft.com/en-us/windows/security/information-protection/bitlocker/bitlocker-group-policy-settings" target="_blank">Windows BitLocker</a>)</p>
+
+                                
+                                </section>
+                            
+                        </div>
+                    </div>
+                    
+                    
+
+<div>
+    <hr>
+    
+      <h2>
+        <div style="position:absolute;text-align:left">Understanding the Trusted Boot Chain Implementation</div>
+        <div style="position:absolute;width:100%;text-align:center">DRAFT [03/30/2021 03:24:01]</div>
+        <div style="text-align:right">Revision 1.0</div>
+      </h2>  
+    
+</div>
+
+
+
+                
+            </div>
+
+            
+                
+                <a href="3_TCG_Trusted_Boot_Chain_in_EDKII.html" class="navigation navigation-prev " aria-label="Previous page: TCG Trusted Boot Chain in EDK II">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="5_Looking_Forward.html" class="navigation navigation-next " aria-label="Next page: Looking Forward">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Other Trusted Boot Chains","level":"1.7","depth":1,"next":{"title":"Looking Forward","level":"1.8","depth":1,"path":"5_Looking_Forward.md","ref":"5_Looking_Forward.md","articles":[]},"previous":{"title":"TCG Trusted Boot Chain in EDK II","level":"1.6","depth":1,"path":"3_TCG_Trusted_Boot_Chain_in_EDKII.md","ref":"3_TCG_Trusted_Boot_Chain_in_EDKII.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{"draft":"yes","title":"Understanding the Trusted Boot Chain Implementation","version":"Revision 1.0"},"plugins":["puml-aleung"],"pluginsConfig":{"puml-aleung":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"4_Other_Trusted_Boot_Chains.md","mtime":"2021-03-30T15:23:31.341Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-03-30T15:24:01.310Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
