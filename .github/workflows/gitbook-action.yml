@@ -2,7 +2,7 @@ name: 'Gitbook Action Build'
 on:
   push:
     branches:
-      - main
+      - master
       - release/*
   workflow_dispatch:
 
@@ -15,7 +15,7 @@ jobs:
     - name: Get Branch
       run: |
         branch=${{ github.ref_name }}
-        pubdir=${branch/main/draft}
+        pubdir=${branch/master/draft}
         pubdir=${pubdir////-}
         echo "ON_PUSH_BRANCH_NAME=$branch" >> $GITHUB_ENV
         echo "ON_PUSH_PUBDIR=$pubdir" >> $GITHUB_ENV
